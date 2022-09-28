@@ -1,14 +1,7 @@
-# Basic Info
-Please run the basic commands 
-1. npm install -g @angular/cli command along with 
-2. ng serve 
-to run the code
-For Backend service Please run [Json Server](https://github.com/typicode/json-server)
-1. npm install -g json-server
-2. json-server --watch db.json
+# Login Info
 the credentials are as shared in assignment
 "email": "info@optium.com" "password": "Optium@112233"
-Note: Sign up page (as was not asked for it is still added for toggling) sends the proper data although the json server is a fake BE where credentials are not appended.
+
 
 # OptiumAssignment
 

@@ -23,9 +23,9 @@ export class LogInPageComponent implements OnInit {
   }
   logInSubmit(){
     console.log(this.logInForm.value);
-    this.http.get<any>('http://localhost:3000/signupUsersList').subscribe((response)=>
-     {console.log(response);
-      const user = response.find((a:any)=>{
+    this.http.get<any>('../../../assets/db.json').subscribe((response)=>
+     {console.log(response.logInList);
+      const user = response.logInList.find((a:any)=>{
       return a.email === this.logInForm.value.email && a.password === this.logInForm.value.password 
     });
     if(user){
