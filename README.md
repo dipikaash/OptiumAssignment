@@ -8,6 +8,7 @@ For Backend service Please run [Json Server](https://github.com/typicode/json-se
 2. json-server --watch db.json
 the credentials are as shared in assignment
 "email": "info@optium.com" "password": "Optium@112233"
+Note: Sign up page (as was not asked for it is still added for toggling) sends the proper data although the json server is a fake BE where credentials are not appended.
 
 # OptiumAssignment
 
