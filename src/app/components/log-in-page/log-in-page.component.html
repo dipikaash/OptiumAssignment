@@ -1,0 +1,19 @@
+<p>log-in-page works!</p>
+<div>
+    <form [formGroup]="logInForm" (ngSubmit)="logInSubmit()">
+        <div class="p-3">
+            <div>
+                <div class="row">
+                    <label for="email" class="col-3">Email</label>
+                <input formControlName="email" class="col-3" required type="email" placeholder="enter a valid email address">
+                </div>
+                <div class="row mt-2"> 
+                    <label for="Password" class="col-3">Password</label>
+                    <input formControlName="password" type="password" class="col-3"> 
+                </div>
+            </div>
+            <button class="btn btn-primary col" [disabled]="!logInForm.valid && logInForm.touched">Submit</button>
+            <div>If Not Registered, Please <a routerLink="/signUp">Sign Up here</a></div>
+        </div>
+    </form>
+</div>
