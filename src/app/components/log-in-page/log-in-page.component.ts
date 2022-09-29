@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LogInPageComponent implements OnInit {
 
-  public logInForm!: FormGroup; 
+  public logInForm!: FormGroup;
+  public isLoggedIn = '1'; 
   constructor(private http: HttpClient,
               private fb: FormBuilder,
               private router: Router) { }
@@ -26,10 +27,11 @@ export class LogInPageComponent implements OnInit {
     this.http.get<any>('../../../assets/db.json').subscribe((response)=>
      {console.log(response.logInList);
       const user = response.logInList.find((a:any)=>{
-      return a.email === this.logInForm.value.email && a.password === this.logInForm.value.password 
+      return a.email === this.logInForm.value.email && a.password === this.logInForm.value.password ;
     });
     if(user){
       this.logInForm.reset();
+      localStorage.setItem('session', this.isLoggedIn);
       this.router.navigate(["dashboard"]);
     }else{
       alert("user not found");

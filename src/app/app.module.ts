@@ -8,6 +8,7 @@ import { LogInPageComponent } from './components/log-in-page/log-in-page.compone
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginGuard } from './auth/login.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
