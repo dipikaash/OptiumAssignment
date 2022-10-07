@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "optiumassignment",
+    "staging": "optiumassignment",
+    "optiumassignment": "optiumassignment"
+  },
+  "targets": {},
+  "etags": {}
+}
